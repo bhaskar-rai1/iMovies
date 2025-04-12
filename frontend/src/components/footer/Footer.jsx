@@ -21,7 +21,7 @@ const Footer = () => {
         </ul>
         <div className="infoText">
           Experience the future of entertainment at your fingertips with
-          Streamify's intuitive interface, empowering users to navigate
+          iMovies's intuitive interface, empowering users to navigate
           effortlessly through a vast library of high-quality, on-demand
           content.
         </div>
