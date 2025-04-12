@@ -1,0 +1,121 @@
+@import "../../mixins.scss";
+
+// Remove default dots globally if caused by ul/li
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.homeContainer {
+  min-height: 100vh;
+  background-color: var(--softBg);
+  color: var(--textColor);
+  padding-top: 60px;
+
+  .homeWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffb300;
+    margin-bottom: 10px;
+  }
+
+  .leftSection {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .trendingCarouselWrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 20px;
+
+      .arrowBtn {
+        background: #ffb300;
+        color: #222;
+        border-radius: 50%;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.left {
+          left: 10px;
+        }
+
+        &.right {
+          right: 10px;
+        }
+
+        &:hover {
+          transform: translateY(-50%) scale(1.1);
+        }
+      }
+
+      .trendingCarousel {
+        display: flex;
+        gap: 15px;
+        overflow: hidden;
+        padding: 10px 60px; // space for buttons
+        scroll-behavior: smooth;
+      }
+    }
+
+    .offers {
+      .offerCard {
+        background-color: #ffb300;
+        color: #222;
+        font-weight: bold;
+        padding: 20px;
+        border-radius: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .categoryList {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+
+      .categoryCard {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 15px;
+        color: #ffb300;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+        &:hover {
+          background-color: #444;
+        }
+      }
+    }
+  }
+}

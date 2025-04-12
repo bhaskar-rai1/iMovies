@@ -1,0 +1,164 @@
+.adminHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+  background-color: var(--bg);
+  color: var(--textColor);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Funnel Sans", sans-serif;
+
+  h1.logo {
+    color: #ffb300;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--textColor);
+    cursor: pointer;
+
+    svg {
+      font-size: 26px;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #ffb300;
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 66px;
+    right: 10px;
+    width: 160px;
+    background-color: var(--bg);
+    border: 2px solid #ffb300;
+    border-radius: 12px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    li {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      svg {
+        font-size: 20px;
+        color: var(--textColor);
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ffb300;
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .searchIconsContainerAdmin {
+    display: none;
+
+    .menuItems {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .item {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          font-size: 22px;
+          color: var(--textColor);
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #ffb300;
+          }
+        }
+      }
+    }
+  }
+
+  .logoutButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--textColor);
+
+    svg {
+      font-size: 20px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffb300;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px 40px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .menuButton {
+      display: none;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .searchIconsContainerAdmin {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: auto;
+
+      .menuItems .item svg {
+        font-size: 24px;
+      }
+    }
+  }
+}
